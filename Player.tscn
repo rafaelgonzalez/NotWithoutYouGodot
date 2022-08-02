@@ -15,10 +15,6 @@ region = Rect2( 0, 208, 16, 16 )
 atlas = ExtResource( 2 )
 region = Rect2( 16, 208, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 2 )
-region = Rect2( 64, 208, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
 region = Rect2( 96, 208, 16, 16 )
@@ -39,16 +35,15 @@ region = Rect2( 48, 208, 16, 16 )
 atlas = ExtResource( 2 )
 region = Rect2( 80, 208, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 208, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 4 ) ],
-"loop": true,
-"name": "Jump",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 5 ) ],
@@ -65,6 +60,11 @@ animations = [ {
 "loop": true,
 "name": "Fall",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 4 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]
@@ -77,5 +77,5 @@ shape = SubResource( 10 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 42, 164 )
 frames = SubResource( 3 )
-animation = "Fall"
-playing = true
+animation = "Idle"
+frame = 1
