@@ -71,7 +71,7 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 42, 166 )
+position = Vector2( 50, 174 )
 shape = SubResource( 10 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -79,3 +79,4 @@ position = Vector2( 42, 164 )
 frames = SubResource( 3 )
 animation = "Idle"
 frame = 1
+centered = false
